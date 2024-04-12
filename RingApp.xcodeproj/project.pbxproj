@@ -7,19 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C380F2C22BC98B3A00BF7E33 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C380F2C12BC98B3A00BF7E33 /* Alamofire */; };
+		C380F2C42BC98B3A00BF7E33 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C380F2C32BC98B3A00BF7E33 /* AlamofireDynamic */; };
+		C380F2C62BC98B9B00BF7E33 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380F2C52BC98B9B00BF7E33 /* NetworkHelper.swift */; };
+		C380F2C82BC98BC100BF7E33 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380F2C72BC98BC100BF7E33 /* NetworkManager.swift */; };
 		C3F666BE2BC71272009AFAD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F666BD2BC71272009AFAD9 /* AppDelegate.swift */; };
 		C3F666C02BC71272009AFAD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F666BF2BC71272009AFAD9 /* SceneDelegate.swift */; };
-		C3F666C22BC71272009AFAD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F666C12BC71272009AFAD9 /* ViewController.swift */; };
+		C3F666C22BC71272009AFAD9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F666C12BC71272009AFAD9 /* HomeViewController.swift */; };
 		C3F666C52BC71272009AFAD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3F666C32BC71272009AFAD9 /* Main.storyboard */; };
 		C3F666C72BC71273009AFAD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3F666C62BC71273009AFAD9 /* Assets.xcassets */; };
 		C3F666CA2BC71273009AFAD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3F666C82BC71273009AFAD9 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C380F2C52BC98B9B00BF7E33 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		C380F2C72BC98BC100BF7E33 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C3F666BA2BC71272009AFAD9 /* RingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F666BD2BC71272009AFAD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3F666BF2BC71272009AFAD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C3F666C12BC71272009AFAD9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C3F666C12BC71272009AFAD9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C3F666C42BC71272009AFAD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C3F666C62BC71273009AFAD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3F666C92BC71273009AFAD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,12 +37,66 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C380F2C22BC98B3A00BF7E33 /* Alamofire in Frameworks */,
+				C380F2C42BC98B3A00BF7E33 /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C380F2BA2BC9897000BF7E33 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				C380F2BC2BC989AB00BF7E33 /* NetworkLayer */,
+				C380F2BF2BC989CD00BF7E33 /* Model */,
+				C380F2BE2BC989C900BF7E33 /* View */,
+				C380F2BD2BC989B600BF7E33 /* ViewModel */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		C380F2BB2BC9897700BF7E33 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C3F666BD2BC71272009AFAD9 /* AppDelegate.swift */,
+				C3F666BF2BC71272009AFAD9 /* SceneDelegate.swift */,
+				C3F666C62BC71273009AFAD9 /* Assets.xcassets */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C380F2BC2BC989AB00BF7E33 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				C380F2C52BC98B9B00BF7E33 /* NetworkHelper.swift */,
+				C380F2C72BC98BC100BF7E33 /* NetworkManager.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		C380F2BD2BC989B600BF7E33 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C380F2BE2BC989C900BF7E33 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C3F666C12BC71272009AFAD9 /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C380F2BF2BC989CD00BF7E33 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C3F666B12BC71272009AFAD9 = {
 			isa = PBXGroup;
 			children = (
@@ -56,11 +116,9 @@
 		C3F666BC2BC71272009AFAD9 /* RingApp */ = {
 			isa = PBXGroup;
 			children = (
-				C3F666BD2BC71272009AFAD9 /* AppDelegate.swift */,
-				C3F666BF2BC71272009AFAD9 /* SceneDelegate.swift */,
-				C3F666C12BC71272009AFAD9 /* ViewController.swift */,
+				C380F2BB2BC9897700BF7E33 /* Core */,
+				C380F2BA2BC9897000BF7E33 /* Feature */,
 				C3F666C32BC71272009AFAD9 /* Main.storyboard */,
-				C3F666C62BC71273009AFAD9 /* Assets.xcassets */,
 				C3F666C82BC71273009AFAD9 /* LaunchScreen.storyboard */,
 				C3F666CB2BC71273009AFAD9 /* Info.plist */,
 			);
@@ -83,6 +141,10 @@
 			dependencies = (
 			);
 			name = RingApp;
+			packageProductDependencies = (
+				C380F2C12BC98B3A00BF7E33 /* Alamofire */,
+				C380F2C32BC98B3A00BF7E33 /* AlamofireDynamic */,
+			);
 			productName = RingApp;
 			productReference = C3F666BA2BC71272009AFAD9 /* RingApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +173,9 @@
 				Base,
 			);
 			mainGroup = C3F666B12BC71272009AFAD9;
+			packageReferences = (
+				C380F2C02BC98B3A00BF7E33 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = C3F666BB2BC71272009AFAD9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +203,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3F666C22BC71272009AFAD9 /* ViewController.swift in Sources */,
+				C380F2C62BC98B9B00BF7E33 /* NetworkHelper.swift in Sources */,
+				C3F666C22BC71272009AFAD9 /* HomeViewController.swift in Sources */,
+				C380F2C82BC98BC100BF7E33 /* NetworkManager.swift in Sources */,
 				C3F666BE2BC71272009AFAD9 /* AppDelegate.swift in Sources */,
 				C3F666C02BC71272009AFAD9 /* SceneDelegate.swift in Sources */,
 			);
@@ -363,6 +430,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C380F2C02BC98B3A00BF7E33 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C380F2C12BC98B3A00BF7E33 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C380F2C02BC98B3A00BF7E33 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		C380F2C32BC98B3A00BF7E33 /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C380F2C02BC98B3A00BF7E33 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C3F666B22BC71272009AFAD9 /* Project object */;
 }
