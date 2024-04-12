@@ -11,6 +11,9 @@
 		C380F2C42BC98B3A00BF7E33 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C380F2C32BC98B3A00BF7E33 /* AlamofireDynamic */; };
 		C380F2C62BC98B9B00BF7E33 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380F2C52BC98B9B00BF7E33 /* NetworkHelper.swift */; };
 		C380F2C82BC98BC100BF7E33 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380F2C72BC98BC100BF7E33 /* NetworkManager.swift */; };
+		C380F2CA2BC997EA00BF7E33 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380F2C92BC997EA00BF7E33 /* HomeViewModel.swift */; };
+		C380F2CD2BC9987800BF7E33 /* HomeViewController+MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380F2CC2BC9987800BF7E33 /* HomeViewController+MapView.swift */; };
+		C380F2CF2BC99A7900BF7E33 /* Bus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380F2CE2BC99A7900BF7E33 /* Bus.swift */; };
 		C3F666BE2BC71272009AFAD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F666BD2BC71272009AFAD9 /* AppDelegate.swift */; };
 		C3F666C02BC71272009AFAD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F666BF2BC71272009AFAD9 /* SceneDelegate.swift */; };
 		C3F666C22BC71272009AFAD9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F666C12BC71272009AFAD9 /* HomeViewController.swift */; };
@@ -22,6 +25,9 @@
 /* Begin PBXFileReference section */
 		C380F2C52BC98B9B00BF7E33 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		C380F2C72BC98BC100BF7E33 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C380F2C92BC997EA00BF7E33 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		C380F2CC2BC9987800BF7E33 /* HomeViewController+MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+MapView.swift"; sourceTree = "<group>"; };
+		C380F2CE2BC99A7900BF7E33 /* Bus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bus.swift; sourceTree = "<group>"; };
 		C3F666BA2BC71272009AFAD9 /* RingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F666BD2BC71272009AFAD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3F666BF2BC71272009AFAD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +84,7 @@
 		C380F2BD2BC989B600BF7E33 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C380F2C92BC997EA00BF7E33 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -86,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				C3F666C12BC71272009AFAD9 /* HomeViewController.swift */,
+				C380F2CC2BC9987800BF7E33 /* HomeViewController+MapView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -93,6 +101,7 @@
 		C380F2BF2BC989CD00BF7E33 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C380F2CE2BC99A7900BF7E33 /* Bus.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -203,10 +212,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C380F2CD2BC9987800BF7E33 /* HomeViewController+MapView.swift in Sources */,
 				C380F2C62BC98B9B00BF7E33 /* NetworkHelper.swift in Sources */,
+				C380F2CA2BC997EA00BF7E33 /* HomeViewModel.swift in Sources */,
 				C3F666C22BC71272009AFAD9 /* HomeViewController.swift in Sources */,
 				C380F2C82BC98BC100BF7E33 /* NetworkManager.swift in Sources */,
 				C3F666BE2BC71272009AFAD9 /* AppDelegate.swift in Sources */,
+				C380F2CF2BC99A7900BF7E33 /* Bus.swift in Sources */,
 				C3F666C02BC71272009AFAD9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
