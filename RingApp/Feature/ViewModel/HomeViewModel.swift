@@ -15,6 +15,7 @@ protocol HomeViewModelProtocol {
     func getStations(mapView: MKMapView)
     func getMapStartView(mapView: MKMapView)
     func getRoute(mapView: MKMapView)
+    func checkLocationAuthorization(locationManager: CLLocationManager)
 }
 
 protocol HomeViewModelOutputProtocol: AnyObject{
@@ -32,12 +33,7 @@ class HomeViewModel {
         for (index,_) in coordinates.enumerated(){
             stations.append(coordinates[index])
         }
-        if stations.isEmpty {
-            delegate?.error()
-        } else {
-            mapView.addAnnotations(stations)
-            delegate?.update()
-        }
+        mapView.addAnnotations(stations)
     }
     
     func getMapStartView(mapView: MKMapView) {
@@ -49,6 +45,23 @@ class HomeViewModel {
         let coordinates = RouteCoordinate.coordinates
         let polyline = MKPolyline(coordinates: coordinates, count: coordinates.count)
         mapView.addOverlay(polyline)
+    }
+    
+    func checkLocationAuthorization(locationManager: CLLocationManager) {
+        switch locationManager.authorizationStatus {
+        case .notDetermined:
+            locationManager.requestWhenInUseAuthorization()
+        case .authorizedWhenInUse, .authorizedAlways:
+            DispatchQueue.global(qos: .userInitiated).async {
+                self.delegate?.update()
+            }
+        case .denied, .restricted:
+            print("Konum izni vermediniz")
+            self.delegate?.error()
+            break
+        @unknown default:
+            break
+        }
     }
 }
 
