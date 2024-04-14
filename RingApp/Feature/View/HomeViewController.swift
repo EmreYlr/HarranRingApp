@@ -14,9 +14,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     
     var homeViewModel: HomeViewModelProtocol = HomeViewModel()
-    let location = CLLocation(latitude: 37.1725812, longitude: 38.996985)
-    let maxZoomLevel: CLLocationDistance = 1700
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
@@ -25,13 +23,9 @@ class HomeViewController: UIViewController {
     }
 
     func initScreen() {
-        initMapView()
+        homeViewModel.getMapStartView(mapView: mapView)
         homeViewModel.getStations(mapView: mapView)
-    }
-    
-    func initMapView(){
-        let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: maxZoomLevel, longitudinalMeters: maxZoomLevel)
-        mapView.setRegion(coordinateRegion, animated: true)
+        homeViewModel.getRoute(mapView: mapView)
     }
 }
 
