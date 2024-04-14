@@ -19,6 +19,20 @@ extension HomeViewController: MKMapViewDelegate {
             mapView.setRegion(coordinateRegion, animated: true)
         }
     }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: any MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation {
+            return nil
+        } else {
+            let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "Annotation")
+            annotationView.image = UIImage(systemName: "mappin.circle")
+            annotationView.canShowCallout = true
+            return annotationView
+        }
+        
+    }
 }
+
+
 
 

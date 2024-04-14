@@ -14,6 +14,8 @@
 		C380F2CA2BC997EA00BF7E33 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380F2C92BC997EA00BF7E33 /* HomeViewModel.swift */; };
 		C380F2CD2BC9987800BF7E33 /* HomeViewController+MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380F2CC2BC9987800BF7E33 /* HomeViewController+MapView.swift */; };
 		C380F2CF2BC99A7900BF7E33 /* Bus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380F2CE2BC99A7900BF7E33 /* Bus.swift */; };
+		C380F2D12BCBE73300BF7E33 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380F2D02BCBE73300BF7E33 /* Station.swift */; };
+		C380F2D42BCBE85D00BF7E33 /* StationCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380F2D32BCBE85D00BF7E33 /* StationCoordinate.swift */; };
 		C3F666BE2BC71272009AFAD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F666BD2BC71272009AFAD9 /* AppDelegate.swift */; };
 		C3F666C02BC71272009AFAD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F666BF2BC71272009AFAD9 /* SceneDelegate.swift */; };
 		C3F666C22BC71272009AFAD9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F666C12BC71272009AFAD9 /* HomeViewController.swift */; };
@@ -28,6 +30,8 @@
 		C380F2C92BC997EA00BF7E33 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		C380F2CC2BC9987800BF7E33 /* HomeViewController+MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+MapView.swift"; sourceTree = "<group>"; };
 		C380F2CE2BC99A7900BF7E33 /* Bus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bus.swift; sourceTree = "<group>"; };
+		C380F2D02BCBE73300BF7E33 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		C380F2D32BCBE85D00BF7E33 /* StationCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCoordinate.swift; sourceTree = "<group>"; };
 		C3F666BA2BC71272009AFAD9 /* RingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F666BD2BC71272009AFAD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3F666BF2BC71272009AFAD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +58,7 @@
 		C380F2BA2BC9897000BF7E33 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				C380F2D22BCBE84200BF7E33 /* Constant */,
 				C380F2BC2BC989AB00BF7E33 /* NetworkLayer */,
 				C380F2BF2BC989CD00BF7E33 /* Model */,
 				C380F2BE2BC989C900BF7E33 /* View */,
@@ -102,8 +107,17 @@
 			isa = PBXGroup;
 			children = (
 				C380F2CE2BC99A7900BF7E33 /* Bus.swift */,
+				C380F2D02BCBE73300BF7E33 /* Station.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C380F2D22BCBE84200BF7E33 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				C380F2D32BCBE85D00BF7E33 /* StationCoordinate.swift */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 		C3F666B12BC71272009AFAD9 = {
@@ -213,12 +227,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C380F2CD2BC9987800BF7E33 /* HomeViewController+MapView.swift in Sources */,
+				C380F2D12BCBE73300BF7E33 /* Station.swift in Sources */,
 				C380F2C62BC98B9B00BF7E33 /* NetworkHelper.swift in Sources */,
 				C380F2CA2BC997EA00BF7E33 /* HomeViewModel.swift in Sources */,
 				C3F666C22BC71272009AFAD9 /* HomeViewController.swift in Sources */,
 				C380F2C82BC98BC100BF7E33 /* NetworkManager.swift in Sources */,
 				C3F666BE2BC71272009AFAD9 /* AppDelegate.swift in Sources */,
 				C380F2CF2BC99A7900BF7E33 /* Bus.swift in Sources */,
+				C380F2D42BCBE85D00BF7E33 /* StationCoordinate.swift in Sources */,
 				C3F666C02BC71272009AFAD9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
