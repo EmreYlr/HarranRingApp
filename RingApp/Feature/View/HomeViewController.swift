@@ -33,17 +33,17 @@ class HomeViewController: UIViewController {
         let status = locationManager.authorizationStatus
         if status == .authorizedWhenInUse || status == .authorizedAlways {
             startUpdatingLocation()
-            let id = UIDevice.current.identifierForVendor?.uuidString
-            print(id ?? "")
-            let userLocation = UserLocation(latitude: lat ?? 0.00, longitude: long ?? 0.00, deviceId: 15)
+            let uuid = UIDevice.current.identifierForVendor?.uuidString
+            print(uuid ?? "")
+            let userLocation = UserLocation(latitude: lat ?? 0.00, longitude: long ?? 0.00, deviceId: uuid ?? "")
+//            DispatchQueue.main.async {
+//                self.homeViewModel.postBus(userParams: userLocation)
+//            }
             print(userLocation)
         } else {
             print("Konum izni verilmedi")
         }
         
-        /*DispatchQueue.main.async {
-            self.homeViewModel.postBus(userParams: userLocation)
-        }*/
     }
     
     func initScreen() {

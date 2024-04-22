@@ -10,7 +10,7 @@ import Foundation
 /// User Model
 struct UserLocation: Codable {
     let latitude, longitude: Double
-    let deviceId: Int
+    let deviceId: String
     
     enum CodingKeys: String, CodingKey {
         case latitude, longitude, deviceId
