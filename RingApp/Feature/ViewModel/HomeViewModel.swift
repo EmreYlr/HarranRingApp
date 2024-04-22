@@ -12,6 +12,8 @@ protocol HomeViewModelProtocol {
     var delegate: HomeViewModelOutputProtocol? { get set }
     var stations: [Station] { get }
     var bus: [Bus] { get }
+    func fetchBus()
+    func postBus(userParams: UserLocation)
     func getStations(mapView: MKMapView)
     func getMapStartView(mapView: MKMapView)
     func getRoute(mapView: MKMapView)
@@ -27,6 +29,43 @@ class HomeViewModel {
     weak var delegate: HomeViewModelOutputProtocol?
     private(set) var stations: [Station] = []
     private(set) var bus: [Bus] = []
+    
+    func fetchBus() {
+        if let url = URL(string: BusPath.GETLASTLOCATION.fullPath()) {
+            DispatchQueue.main.async {
+                NetworkManager.shared.request(from: url, method: .get) { [weak self] (result: Result<[Bus], ErrorTypes>) in
+                    switch result {
+                    case .success(let data):
+                        self?.bus = data
+                        self?.delegate?.update()
+                    case .failure(let error):
+                        print("Hata: \(error)")
+                        self?.delegate?.error()
+                    }
+                }
+            }
+        }
+    }
+    func postBus(userParams: UserLocation) {
+        let params: [String : Any] = [
+            "latitude": userParams.latitude,
+            "longitude": userParams.longitude,
+            "deviceId": userParams.deviceId]
+        
+        if let url = URL(string: BusPath.POSTLOCATION.fullPath()) {
+            NetworkManager.shared.requestDecodable(from: url, method: .post, parameters: params) { (result: Result<Void, ErrorTypes>) in
+                switch result {
+                case .success(_):
+                    print("Başarılı")
+                    break
+                case .failure(let error):
+                    print("Hata: \(error)")
+                }
+            }
+        }
+        
+    }
+    
     
     func getStations(mapView: MKMapView) {
         let coordinates = StationCoordinate.coordinates

@@ -7,5 +7,8 @@
 
 import Foundation
 
-class Bus { }
-
+/// Bus Model
+struct Bus: Codable {
+    let latitude, longitude: Double
+    let count: Int
+}

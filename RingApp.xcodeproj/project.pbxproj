@@ -19,6 +19,7 @@
 		C380F2D62BCC10E100BF7E33 /* InitLocationCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380F2D52BCC10E100BF7E33 /* InitLocationCoordinate.swift */; };
 		C380F2D82BCC138F00BF7E33 /* RouteCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380F2D72BCC138F00BF7E33 /* RouteCoordinate.swift */; };
 		C380F2DA2BCC607700BF7E33 /* HomeViewController+LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380F2D92BCC607700BF7E33 /* HomeViewController+LocationManager.swift */; };
+		C380F2DC2BD68DF600BF7E33 /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380F2DB2BD68DF600BF7E33 /* UserLocation.swift */; };
 		C3F666BE2BC71272009AFAD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F666BD2BC71272009AFAD9 /* AppDelegate.swift */; };
 		C3F666C02BC71272009AFAD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F666BF2BC71272009AFAD9 /* SceneDelegate.swift */; };
 		C3F666C22BC71272009AFAD9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F666C12BC71272009AFAD9 /* HomeViewController.swift */; };
@@ -38,6 +39,7 @@
 		C380F2D52BCC10E100BF7E33 /* InitLocationCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitLocationCoordinate.swift; sourceTree = "<group>"; };
 		C380F2D72BCC138F00BF7E33 /* RouteCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCoordinate.swift; sourceTree = "<group>"; };
 		C380F2D92BCC607700BF7E33 /* HomeViewController+LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+LocationManager.swift"; sourceTree = "<group>"; };
+		C380F2DB2BD68DF600BF7E33 /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
 		C3F666BA2BC71272009AFAD9 /* RingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F666BD2BC71272009AFAD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3F666BF2BC71272009AFAD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			children = (
 				C380F2CE2BC99A7900BF7E33 /* Bus.swift */,
 				C380F2D02BCBE73300BF7E33 /* Station.swift */,
+				C380F2DB2BD68DF600BF7E33 /* UserLocation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				C380F2D62BCC10E100BF7E33 /* InitLocationCoordinate.swift in Sources */,
 				C380F2D82BCC138F00BF7E33 /* RouteCoordinate.swift in Sources */,
 				C380F2C62BC98B9B00BF7E33 /* NetworkHelper.swift in Sources */,
+				C380F2DC2BD68DF600BF7E33 /* UserLocation.swift in Sources */,
 				C380F2CA2BC997EA00BF7E33 /* HomeViewModel.swift in Sources */,
 				C3F666C22BC71272009AFAD9 /* HomeViewController.swift in Sources */,
 				C380F2C82BC98BC100BF7E33 /* NetworkManager.swift in Sources */,

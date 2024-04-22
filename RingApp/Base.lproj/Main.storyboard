@@ -21,19 +21,38 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="415"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lg-fx-8gh">
+                                <rect key="frame" x="131" y="604" width="130" height="70"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="NvY-at-obD"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="BAŞLAT">
+                                    <fontDescription key="titleFontDescription" name="ArialMT" family="Arial" pointSize="19"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="startButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AWh-50-7mO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="RE7-Y2-Gk1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7It-qG-yVk"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RE7-Y2-Gk1" secondAttribute="bottom" constant="300" id="GDw-mv-8Nj"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RE7-Y2-Gk1" secondAttribute="trailing" id="JEU-Ua-VkN"/>
-                            <constraint firstItem="RE7-Y2-Gk1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="v3a-2z-Ycj"/>
+                            <constraint firstItem="4lg-fx-8gh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1ub-kr-RMZ"/>
+                            <constraint firstItem="RE7-Y2-Gk1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2Ak-G9-Rbc"/>
+                            <constraint firstItem="RE7-Y2-Gk1" firstAttribute="centerX" secondItem="4lg-fx-8gh" secondAttribute="centerX" id="E4G-Tr-lOf"/>
+                            <constraint firstItem="4lg-fx-8gh" firstAttribute="top" secondItem="RE7-Y2-Gk1" secondAttribute="bottom" constant="86" id="XyJ-dU-ZSQ"/>
+                            <constraint firstItem="RE7-Y2-Gk1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mfE-QY-lmB"/>
+                            <constraint firstItem="4lg-fx-8gh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="131" id="ufe-rR-vs0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4lg-fx-8gh" secondAttribute="bottom" constant="144" id="xAE-J5-fe2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="RİNG APP" id="N45-cg-mLe"/>
                     <connections>
                         <outlet property="mapView" destination="RE7-Y2-Gk1" id="0I8-3v-0ua"/>
+                        <outlet property="startButton" destination="4lg-fx-8gh" id="eyt-6n-0Se"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -62,6 +81,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

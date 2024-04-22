@@ -12,9 +12,12 @@ import CoreLocation
 class HomeViewController: UIViewController {
     
     // MARK: -VARIABLES
+    
+    @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var mapView: MKMapView!
     var homeViewModel: HomeViewModelProtocol = HomeViewModel()
     var locationManager = CLLocationManager()
+    var lat, long: Double?
     
     //MARK: -FUNCTIONS
     override func viewDidLoad() {
@@ -23,10 +26,28 @@ class HomeViewController: UIViewController {
         locationManager.delegate = self
         homeViewModel.delegate = self
         initScreen()
+                
+    }
+    
+    @IBAction func startButtonAction(_ sender: UIButton) {
+        let status = locationManager.authorizationStatus
+        if status == .authorizedWhenInUse || status == .authorizedAlways {
+            startUpdatingLocation()
+            let id = UIDevice.current.identifierForVendor?.uuidString
+            print(id ?? "")
+            let userLocation = UserLocation(latitude: lat ?? 0.00, longitude: long ?? 0.00, deviceId: 15)
+            print(userLocation)
+        } else {
+            print("Konum izni verilmedi")
+        }
         
+        /*DispatchQueue.main.async {
+            self.homeViewModel.postBus(userParams: userLocation)
+        }*/
     }
     
     func initScreen() {
+        homeViewModel.fetchBus()
         homeViewModel.getMapStartView(mapView: mapView)
         homeViewModel.getStations(mapView: mapView)
         homeViewModel.getRoute(mapView: mapView)
@@ -39,6 +60,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController: HomeViewModelOutputProtocol {
     func update() {
         self.startUpdatingLocation()
+        print(homeViewModel.bus)
         print("Update")
     }
     

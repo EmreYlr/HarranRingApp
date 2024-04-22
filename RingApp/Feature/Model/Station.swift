@@ -7,6 +7,8 @@
 
 import Foundation
 import MapKit
+
+/// Station Model
 class Station: NSObject, MKAnnotation {
     var title: String?
     var subtitle: String?
