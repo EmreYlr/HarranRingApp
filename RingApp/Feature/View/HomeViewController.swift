@@ -13,8 +13,11 @@ class HomeViewController: UIViewController {
     
     // MARK: -VARIABLES
     
+    @IBOutlet weak var locationStateLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var mapView: MKMapView!
+    
+    @IBOutlet weak var stopButton: UIButton!
     var homeViewModel: HomeViewModelProtocol = HomeViewModel()
     var locationManager = CLLocationManager()
     var lat, long: Double?
@@ -29,6 +32,14 @@ class HomeViewController: UIViewController {
                 
     }
     
+    @IBAction func stopButtonAction(_ sender: Any) {
+        locationManager.stopUpdatingLocation()
+        startButton.isEnabled = true
+        stopButton.isEnabled = false
+        locationStateLabel.text = "PASİF"
+        locationStateLabel.textColor = .red
+    }
+    
     @IBAction func startButtonAction(_ sender: UIButton) {
         let status = locationManager.authorizationStatus
         if status == .authorizedWhenInUse || status == .authorizedAlways {
@@ -36,9 +47,13 @@ class HomeViewController: UIViewController {
             let uuid = UIDevice.current.identifierForVendor?.uuidString
             print(uuid ?? "")
             let userLocation = UserLocation(latitude: lat ?? 0.00, longitude: long ?? 0.00, deviceId: uuid ?? "")
-//            DispatchQueue.main.async {
-//                self.homeViewModel.postBus(userParams: userLocation)
-//            }
+            DispatchQueue.main.async {
+                self.homeViewModel.postBus(userParams: userLocation)
+            }
+            startButton.isEnabled = false
+            stopButton.isEnabled = true
+            locationStateLabel.text = "AKTİF"
+            locationStateLabel.textColor = .green
             print(userLocation)
         } else {
             print("Konum izni verilmedi")
