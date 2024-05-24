@@ -11,9 +11,10 @@ import MapKit
 protocol HomeViewModelProtocol {
     var delegate: HomeViewModelOutputProtocol? { get set }
     var stations: [Station] { get }
-    var bus: [Bus] { get }
+    var bus: [Bus] { get set }
     func fetchBus()
     func postBus(userParams: UserLocation)
+    func getBus(mapView: MKMapView)
     func getStations(mapView: MKMapView)
     func getMapStartView(mapView: MKMapView)
     func getRoute(mapView: MKMapView)
@@ -28,7 +29,7 @@ protocol HomeViewModelOutputProtocol: AnyObject{
 class HomeViewModel {
     weak var delegate: HomeViewModelOutputProtocol?
     private(set) var stations: [Station] = []
-    private(set) var bus: [Bus] = []
+    var bus: [Bus] = []
     
     func fetchBus() {
         if let url = URL(string: BusPath.GETLASTLOCATION.fullPath()) {
@@ -46,6 +47,7 @@ class HomeViewModel {
             }
         }
     }
+    
     func postBus(userParams: UserLocation) {
         let params: [String : Any] = [
             "latitude": userParams.latitude,
@@ -66,6 +68,14 @@ class HomeViewModel {
         
     }
     
+    func getBus(mapView: MKMapView){
+        for bus in bus {
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = CLLocationCoordinate2D(latitude: bus.latitude, longitude: bus.longitude)
+            annotation.title = "Paylaşan Sayısı: \(bus.count)"
+            mapView.addAnnotation(annotation)
+        }
+    }
     
     func getStations(mapView: MKMapView) {
         let coordinates = StationCoordinate.coordinates

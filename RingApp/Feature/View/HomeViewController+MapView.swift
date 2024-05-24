@@ -23,10 +23,27 @@ extension HomeViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: any MKAnnotation) -> MKAnnotationView? {
         if annotation is MKUserLocation {
             return nil
-        } else {
-            let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "Annotation")
-            annotationView.image = UIImage(systemName: "mappin.circle")
-            annotationView.canShowCallout = true
+        } else if let busStopAnnotation = annotation as? Station {
+            let identifier = "BusStopAnnotation"
+            var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+            if annotationView == nil {
+                annotationView = MKAnnotationView(annotation: busStopAnnotation, reuseIdentifier: identifier)
+                annotationView?.image = UIImage(systemName: "mappin.circle")
+                annotationView?.canShowCallout = true
+            } else {
+                annotationView?.annotation = busStopAnnotation
+            }
+            return annotationView
+        } else{
+            let identifier = "BusAnnotation"
+            var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+            if annotationView == nil {
+                annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                annotationView?.canShowCallout = true
+            } else {
+                annotationView?.annotation = annotation
+            }
+            annotationView?.image = UIImage(systemName: "bus.fill")
             return annotationView
         }
         

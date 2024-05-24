@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--RİNG APP-->
+        <!--HARRAN RING-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="RingApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -72,7 +72,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.23921570180000001" green="0.54509806630000002" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="vVs-iG-Q2V" firstAttribute="leading" secondItem="sw4-ul-5mc" secondAttribute="leading" id="0rk-0t-Pqv"/>
                             <constraint firstItem="yiJ-SX-Xl4" firstAttribute="leading" secondItem="4lg-fx-8gh" secondAttribute="leading" id="2Bx-sA-94Y"/>
@@ -96,7 +96,7 @@
                             <constraint firstItem="RE7-Y2-Gk1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="z1E-yg-bn4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="RİNG APP" id="N45-cg-mLe"/>
+                    <navigationItem key="navigationItem" title="HARRAN RING" id="N45-cg-mLe"/>
                     <connections>
                         <outlet property="locationStateLabel" destination="vVs-iG-Q2V" id="7Wq-Zh-ybI"/>
                         <outlet property="mapView" destination="RE7-Y2-Gk1" id="0I8-3v-0ua"/>
@@ -131,9 +131,6 @@
         <image name="location.magnifyingglass" catalog="system" width="128" height="117"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

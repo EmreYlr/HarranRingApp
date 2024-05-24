@@ -26,9 +26,6 @@ extension HomeViewController : CLLocationManagerDelegate {
         lat = location.coordinate.latitude
         long = location.coordinate.longitude
         let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
-        DispatchQueue.main.async { [weak self] in
-            self?.mapView.setRegion(region, animated: true)
-        }
         locationManager.stopUpdatingLocation()
     }
     

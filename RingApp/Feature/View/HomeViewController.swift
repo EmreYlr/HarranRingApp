@@ -16,11 +16,11 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var locationStateLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var mapView: MKMapView!
-    
     @IBOutlet weak var stopButton: UIButton!
     var homeViewModel: HomeViewModelProtocol = HomeViewModel()
     var locationManager = CLLocationManager()
     var lat, long: Double?
+    var timer: Timer?
     
     //MARK: -FUNCTIONS
     override func viewDidLoad() {
@@ -29,7 +29,13 @@ class HomeViewController: UIViewController {
         locationManager.delegate = self
         homeViewModel.delegate = self
         initScreen()
-                
+        timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(updateData), userInfo: nil, repeats: true)
+    }
+    @objc func updateData() {
+        homeViewModel.bus.removeAll()
+        mapView.removeAnnotations(mapView.annotations)
+        homeViewModel.fetchBus()
+        homeViewModel.getStations(mapView: mapView)
     }
     
     @IBAction func stopButtonAction(_ sender: Any) {
@@ -76,6 +82,7 @@ extension HomeViewController: HomeViewModelOutputProtocol {
     func update() {
         self.startUpdatingLocation()
         print(homeViewModel.bus)
+        homeViewModel.getBus(mapView: mapView)
         print("Update")
     }
     
