@@ -28,7 +28,7 @@ final class NetworkManager {
             }
     }
     /// Request POST method
-    func requestDecodable(from url: URL, method: HTTPMethods, parameters: Parameters? = nil, completion: @escaping (Result<Void, ErrorTypes>) -> Void) {
+    func requestDecodable(from url: URL, method: HTTPMethods, parameters: Parameters, completion: @escaping (Result<Void, ErrorTypes>) -> Void) {
         
         let headers: HTTPHeaders = ["Content-Type": "application/json"]
         

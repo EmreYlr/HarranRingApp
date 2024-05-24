@@ -25,7 +25,7 @@ extension HomeViewController : CLLocationManagerDelegate {
         guard let location = locations.last else { return }
         lat = location.coordinate.latitude
         long = location.coordinate.longitude
-        let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
+//        let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
         locationManager.stopUpdatingLocation()
     }
     

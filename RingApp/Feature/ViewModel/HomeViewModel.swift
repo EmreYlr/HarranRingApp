@@ -23,6 +23,7 @@ protocol HomeViewModelProtocol {
 
 protocol HomeViewModelOutputProtocol: AnyObject{
     func update()
+    func stopLoad()
     func error()
 }
 
@@ -43,6 +44,7 @@ class HomeViewModel {
                         print("Hata: \(error)")
                         self?.delegate?.error()
                     }
+                    self?.delegate?.stopLoad()
                 }
             }
         }
