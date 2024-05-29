@@ -16,6 +16,4 @@ class StationViewController: UIViewController {
         tableView.dataSource = self
         tableView.reloadData()
     }
-    
-
 }

@@ -27,7 +27,7 @@ protocol HomeViewModelOutputProtocol: AnyObject{
     func error()
 }
 
-class HomeViewModel {
+final class HomeViewModel {
     weak var delegate: HomeViewModelOutputProtocol?
     private(set) var stations: [Station] = []
     var bus: [Bus] = []

@@ -1,15 +1,15 @@
 //
-//  HomeViewController+LocationManager.swift
+//  HowCanGoViewController+LocationManager.swift
 //  RingApp
 //
-//  Created by Emre on 14.04.2024.
+//  Created by Emre on 29.05.2024.
 //
 
 import Foundation
 import CoreLocation
 import MapKit
 
-extension HomeViewController : CLLocationManagerDelegate {
+extension HowCanGoViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse || status == .authorizedAlways {
@@ -23,13 +23,16 @@ extension HomeViewController : CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
-        lat = location.coordinate.latitude
-        long = location.coordinate.longitude
-//        let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
+        userLocation = location.coordinate
+        if let userLocation = userLocation {
+            nearestStation = howCanGoViewModel.findNearestStation(userLocation: userLocation)
+            stationLabel.text = "\(nearestStation?.title ?? "YOK") - \(nearestStation?.subtitle ?? "YOK")"
+        }
+        
         locationManager.stopUpdatingLocation()
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        showAlert(title: "Error", message: "Location manager failed with error: \(error)")
+        print("Error: \(error)")
     }
 }

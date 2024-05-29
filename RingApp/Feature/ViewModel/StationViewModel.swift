@@ -9,6 +9,6 @@ import Foundation
 
 protocol StationViewModelProtocol { }
 
-class StationViewModel { }
+final class StationViewModel { }
 
 extension StationViewModel: StationViewModelProtocol { }

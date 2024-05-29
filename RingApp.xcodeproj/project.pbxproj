@@ -24,6 +24,10 @@
 		C380F2D82BCC138F00BF7E33 /* RouteCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380F2D72BCC138F00BF7E33 /* RouteCoordinate.swift */; };
 		C380F2DA2BCC607700BF7E33 /* HomeViewController+LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380F2D92BCC607700BF7E33 /* HomeViewController+LocationManager.swift */; };
 		C380F2DC2BD68DF600BF7E33 /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380F2DB2BD68DF600BF7E33 /* UserLocation.swift */; };
+		C39EB4092C07967E0064079E /* HowCanGoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EB4082C07967E0064079E /* HowCanGoViewController.swift */; };
+		C39EB40B2C0796900064079E /* HowCanGoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EB40A2C0796900064079E /* HowCanGoViewModel.swift */; };
+		C39EB40D2C0799210064079E /* HowCanGoViewController+MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EB40C2C0799210064079E /* HowCanGoViewController+MapView.swift */; };
+		C39EB40F2C0799620064079E /* HowCanGoViewController+LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EB40E2C0799620064079E /* HowCanGoViewController+LocationManager.swift */; };
 		C3F666BE2BC71272009AFAD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F666BD2BC71272009AFAD9 /* AppDelegate.swift */; };
 		C3F666C02BC71272009AFAD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F666BF2BC71272009AFAD9 /* SceneDelegate.swift */; };
 		C3F666C22BC71272009AFAD9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F666C12BC71272009AFAD9 /* HomeViewController.swift */; };
@@ -32,9 +36,24 @@
 		C3F666CA2BC71273009AFAD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3F666C82BC71273009AFAD9 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C3321B102C011D8A00F3961E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		C3321AF32C00F06700F3961E /* StationViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StationViewController+TableView.swift"; sourceTree = "<group>"; };
 		C3321AF52C00F7D400F3961E /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		C3321AFD2C011D8900F3961E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		C3321AFF2C011D8900F3961E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		C3493D842C00EDEA00BDEC2C /* StationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewController.swift; sourceTree = "<group>"; };
 		C3493D862C00EDF800BDEC2C /* StationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewModel.swift; sourceTree = "<group>"; };
 		C380F2C52BC98B9B00BF7E33 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
@@ -48,6 +67,10 @@
 		C380F2D72BCC138F00BF7E33 /* RouteCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCoordinate.swift; sourceTree = "<group>"; };
 		C380F2D92BCC607700BF7E33 /* HomeViewController+LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+LocationManager.swift"; sourceTree = "<group>"; };
 		C380F2DB2BD68DF600BF7E33 /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
+		C39EB4082C07967E0064079E /* HowCanGoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowCanGoViewController.swift; sourceTree = "<group>"; };
+		C39EB40A2C0796900064079E /* HowCanGoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowCanGoViewModel.swift; sourceTree = "<group>"; };
+		C39EB40C2C0799210064079E /* HowCanGoViewController+MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HowCanGoViewController+MapView.swift"; sourceTree = "<group>"; };
+		C39EB40E2C0799620064079E /* HowCanGoViewController+LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HowCanGoViewController+LocationManager.swift"; sourceTree = "<group>"; };
 		C3F666BA2BC71272009AFAD9 /* RingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F666BD2BC71272009AFAD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3F666BF2BC71272009AFAD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +113,15 @@
 			path = Station;
 			sourceTree = "<group>";
 		};
+		C3321AFC2C011D8900F3961E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3321AFD2C011D8900F3961E /* WidgetKit.framework */,
+				C3321AFF2C011D8900F3961E /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C380F2BA2BC9897000BF7E33 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +158,7 @@
 			children = (
 				C380F2C92BC997EA00BF7E33 /* HomeViewModel.swift */,
 				C3493D862C00EDF800BDEC2C /* StationViewModel.swift */,
+				C39EB40A2C0796900064079E /* HowCanGoViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -135,6 +168,7 @@
 			children = (
 				C3321AF12C00F03F00F3961E /* Home */,
 				C3321AF22C00F04B00F3961E /* Station */,
+				C39EB4072C07962D0064079E /* HowCanGo */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -160,10 +194,21 @@
 			path = Constant;
 			sourceTree = "<group>";
 		};
+		C39EB4072C07962D0064079E /* HowCanGo */ = {
+			isa = PBXGroup;
+			children = (
+				C39EB4082C07967E0064079E /* HowCanGoViewController.swift */,
+				C39EB40C2C0799210064079E /* HowCanGoViewController+MapView.swift */,
+				C39EB40E2C0799620064079E /* HowCanGoViewController+LocationManager.swift */,
+			);
+			path = HowCanGo;
+			sourceTree = "<group>";
+		};
 		C3F666B12BC71272009AFAD9 = {
 			isa = PBXGroup;
 			children = (
 				C3F666BC2BC71272009AFAD9 /* RingApp */,
+				C3321AFC2C011D8900F3961E /* Frameworks */,
 				C3F666BB2BC71272009AFAD9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -198,6 +243,7 @@
 				C3F666B62BC71272009AFAD9 /* Sources */,
 				C3F666B72BC71272009AFAD9 /* Frameworks */,
 				C3F666B82BC71272009AFAD9 /* Resources */,
+				C3321B102C011D8A00F3961E /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -219,7 +265,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1520;
+				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					C3F666B92BC71272009AFAD9 = {
@@ -268,15 +314,19 @@
 			files = (
 				C380F2CD2BC9987800BF7E33 /* HomeViewController+MapView.swift in Sources */,
 				C380F2D12BCBE73300BF7E33 /* Station.swift in Sources */,
+				C39EB4092C07967E0064079E /* HowCanGoViewController.swift in Sources */,
 				C3321AF42C00F06700F3961E /* StationViewController+TableView.swift in Sources */,
 				C380F2D62BCC10E100BF7E33 /* InitLocationCoordinate.swift in Sources */,
 				C380F2D82BCC138F00BF7E33 /* RouteCoordinate.swift in Sources */,
 				C380F2C62BC98B9B00BF7E33 /* NetworkHelper.swift in Sources */,
 				C380F2DC2BD68DF600BF7E33 /* UserLocation.swift in Sources */,
 				C380F2CA2BC997EA00BF7E33 /* HomeViewModel.swift in Sources */,
+				C39EB40F2C0799620064079E /* HowCanGoViewController+LocationManager.swift in Sources */,
 				C3F666C22BC71272009AFAD9 /* HomeViewController.swift in Sources */,
+				C39EB40D2C0799210064079E /* HowCanGoViewController+MapView.swift in Sources */,
 				C3321AF62C00F7D400F3961E /* UIViewController+Alert.swift in Sources */,
 				C380F2C82BC98BC100BF7E33 /* NetworkManager.swift in Sources */,
+				C39EB40B2C0796900064079E /* HowCanGoViewModel.swift in Sources */,
 				C3493D852C00EDEA00BDEC2C /* StationViewController.swift in Sources */,
 				C380F2DA2BCC607700BF7E33 /* HomeViewController+LocationManager.swift in Sources */,
 				C3F666BE2BC71272009AFAD9 /* AppDelegate.swift in Sources */,

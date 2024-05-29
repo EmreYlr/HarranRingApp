@@ -118,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1974.8091603053435" y="-220.42253521126761"/>
+            <point key="canvasLocation" x="1975" y="-506"/>
         </scene>
         <!--Ana Sayfa-->
         <scene sceneID="hiB-i9-f7h">
@@ -137,7 +137,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ny8-t7-1RS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1059" y="-220"/>
+            <point key="canvasLocation" x="1059" y="-506"/>
         </scene>
         <!--Duraklar-->
         <scene sceneID="8CF-6h-pnZ">
@@ -154,7 +154,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Yd-Oo-cOd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1059" y="517"/>
+            <point key="canvasLocation" x="1059" y="210"/>
         </scene>
         <!--DURAKLAR-->
         <scene sceneID="2a3-md-BVg">
@@ -185,7 +185,109 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b2v-wZ-yh7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1975" y="517"/>
+            <point key="canvasLocation" x="1975" y="210"/>
+        </scene>
+        <!--Durağa Nasıl Giderim-->
+        <scene sceneID="poM-lU-uoC">
+            <objects>
+                <navigationController id="dT2-OI-Xn5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Durağa Nasıl Giderim" image="figure.walk" catalog="system" selectedImage="figure.walk" id="kwd-Xi-CfE"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Q7t-En-mJt">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gux-uq-5Fi" kind="relationship" relationship="rootViewController" id="vli-Qb-ElP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mgd-Ux-HJ3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1059" y="926"/>
+        </scene>
+        <!--En Yakın Durak-->
+        <scene sceneID="WQe-yD-pbW">
+            <objects>
+                <viewController id="gux-uq-5Fi" customClass="HowCanGoViewController" customModule="RingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DGn-8w-zv9">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q0z-lO-IaX">
+                                <rect key="frame" x="0.0" y="103" width="393" height="394"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sana En Yakın Durak" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMs-kC-yVL">
+                                <rect key="frame" x="122" y="530" width="194" height="41.666666666666629"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41.666666666666629" id="XYd-1a-dBn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location.magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GgG-yt-iOC">
+                                <rect key="frame" x="74" y="531" width="40" height="40"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="ZzT-Ay-kDv"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="durakNo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIa-tu-t8I">
+                                <rect key="frame" x="16" y="595" width="361" height="80"/>
+                                <color key="backgroundColor" red="0.47843137250000001" green="0.76862745099999996" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="BNV-Bq-Hli"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rg-p4-JlT">
+                                <rect key="frame" x="118" y="694" width="157" height="66"/>
+                                <color key="backgroundColor" red="0.39607840779999998" green="0.76862752440000004" blue="0.40000003579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="ex2-zJ-WdH"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Durağa Git">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goButtonAction:" destination="gux-uq-5Fi" eventType="touchUpInside" id="SRE-UF-hrc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bxn-qc-qkK"/>
+                        <color key="backgroundColor" red="0.23921570180000001" green="0.54509806630000002" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="1rg-p4-JlT" firstAttribute="top" secondItem="iIa-tu-t8I" secondAttribute="bottom" constant="19" id="60c-yu-2mp"/>
+                            <constraint firstItem="Q0z-lO-IaX" firstAttribute="centerX" secondItem="iIa-tu-t8I" secondAttribute="centerX" id="8JC-rt-9kt"/>
+                            <constraint firstItem="1rg-p4-JlT" firstAttribute="leading" secondItem="bxn-qc-qkK" secondAttribute="leading" constant="118" id="ATF-5P-ZNl"/>
+                            <constraint firstItem="bxn-qc-qkK" firstAttribute="bottom" secondItem="1rg-p4-JlT" secondAttribute="bottom" constant="9" id="AUh-Gr-Va0"/>
+                            <constraint firstItem="GgG-yt-iOC" firstAttribute="top" secondItem="JMs-kC-yVL" secondAttribute="top" id="DGI-n8-o1w"/>
+                            <constraint firstItem="GgG-yt-iOC" firstAttribute="centerY" secondItem="JMs-kC-yVL" secondAttribute="centerY" id="EYx-eh-EN7"/>
+                            <constraint firstItem="bxn-qc-qkK" firstAttribute="trailing" secondItem="JMs-kC-yVL" secondAttribute="trailing" constant="77" id="Er7-0E-Dut"/>
+                            <constraint firstItem="GgG-yt-iOC" firstAttribute="leading" secondItem="bxn-qc-qkK" secondAttribute="leading" constant="74" id="PYR-CX-KCe"/>
+                            <constraint firstItem="iIa-tu-t8I" firstAttribute="top" secondItem="GgG-yt-iOC" secondAttribute="bottom" constant="23.333333333333258" id="Ppl-fB-fVr"/>
+                            <constraint firstItem="Q0z-lO-IaX" firstAttribute="top" secondItem="bxn-qc-qkK" secondAttribute="top" id="QQn-ia-FXW"/>
+                            <constraint firstItem="iIa-tu-t8I" firstAttribute="centerX" secondItem="1rg-p4-JlT" secondAttribute="centerX" id="R6w-ut-56f"/>
+                            <constraint firstItem="GgG-yt-iOC" firstAttribute="top" secondItem="Q0z-lO-IaX" secondAttribute="bottom" constant="33" id="olL-3j-bfz"/>
+                            <constraint firstItem="Q0z-lO-IaX" firstAttribute="leading" secondItem="bxn-qc-qkK" secondAttribute="leading" id="pHK-Zy-lqf"/>
+                            <constraint firstItem="iIa-tu-t8I" firstAttribute="leading" secondItem="DGn-8w-zv9" secondAttribute="leadingMargin" id="rDV-xr-cSW"/>
+                            <constraint firstItem="JMs-kC-yVL" firstAttribute="leading" secondItem="GgG-yt-iOC" secondAttribute="trailing" constant="8" id="rwj-pp-KNE"/>
+                            <constraint firstItem="iIa-tu-t8I" firstAttribute="trailing" secondItem="DGn-8w-zv9" secondAttribute="trailingMargin" id="yys-z3-UgA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="En Yakın Durak" id="Me4-bF-gTK"/>
+                    <connections>
+                        <outlet property="goButton" destination="1rg-p4-JlT" id="5CW-ey-sJm"/>
+                        <outlet property="mapView" destination="Q0z-lO-IaX" id="wfB-Jw-qNX"/>
+                        <outlet property="stationLabel" destination="iIa-tu-t8I" id="2QV-lV-qKG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="33o-ly-hmR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1974.8091603053435" y="924.64788732394368"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="3Xk-cg-cEJ">
@@ -200,15 +302,17 @@
                     <connections>
                         <segue destination="u5q-G0-DqB" kind="relationship" relationship="viewControllers" id="npS-cM-LES"/>
                         <segue destination="xld-g7-MlE" kind="relationship" relationship="viewControllers" id="6r1-Wc-Viw"/>
+                        <segue destination="dT2-OI-Xn5" kind="relationship" relationship="viewControllers" id="GFt-Nz-SZG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XKo-3T-KGw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="-288" y="111"/>
         </scene>
     </scenes>
     <resources>
         <image name="figure.2.and.child.holdinghands" catalog="system" width="128" height="93"/>
+        <image name="figure.walk" catalog="system" width="95" height="128"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="location.magnifyingglass" catalog="system" width="128" height="117"/>
         <systemColor name="labelColor">
