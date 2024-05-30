@@ -25,6 +25,8 @@ protocol HomeViewModelOutputProtocol: AnyObject{
     func update()
     func stopLoad()
     func error()
+    func postUpdate()
+    func postError()
 }
 
 final class HomeViewModel {
@@ -40,8 +42,8 @@ final class HomeViewModel {
                     case .success(let data):
                         self?.bus = data
                         self?.delegate?.update()
-                    case .failure(let error):
-                        print("Hata: \(error)")
+                    case .failure(_):
+                        //print("Hata: \(error)")
                         self?.delegate?.error()
                     }
                     self?.delegate?.stopLoad()
@@ -57,13 +59,15 @@ final class HomeViewModel {
             "deviceId": userParams.deviceId]
         
         if let url = URL(string: BusPath.POSTLOCATION.fullPath()) {
-            NetworkManager.shared.requestDecodable(from: url, method: .post, parameters: params) { (result: Result<Void, ErrorTypes>) in
+            NetworkManager.shared.requestDecodable(from: url, method: .post, parameters: params) { [weak self] (result: Result<Void, ErrorTypes>) in
                 switch result {
                 case .success(_):
-                    print("Başarılı")
+                    //print("Başarılı")
+                    self?.delegate?.postUpdate()
                     break
-                case .failure(let error):
-                    print("Hata: \(error)")
+                case .failure(_):
+                    //print("Hata: \(error)")
+                    self?.delegate?.postError()
                 }
             }
         }

@@ -28,6 +28,7 @@
 		C39EB40B2C0796900064079E /* HowCanGoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EB40A2C0796900064079E /* HowCanGoViewModel.swift */; };
 		C39EB40D2C0799210064079E /* HowCanGoViewController+MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EB40C2C0799210064079E /* HowCanGoViewController+MapView.swift */; };
 		C39EB40F2C0799620064079E /* HowCanGoViewController+LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EB40E2C0799620064079E /* HowCanGoViewController+LocationManager.swift */; };
+		C39EB4112C08EF110064079E /* StationViewController+SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39EB4102C08EF110064079E /* StationViewController+SearchView.swift */; };
 		C3F666BE2BC71272009AFAD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F666BD2BC71272009AFAD9 /* AppDelegate.swift */; };
 		C3F666C02BC71272009AFAD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F666BF2BC71272009AFAD9 /* SceneDelegate.swift */; };
 		C3F666C22BC71272009AFAD9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F666C12BC71272009AFAD9 /* HomeViewController.swift */; };
@@ -71,6 +72,7 @@
 		C39EB40A2C0796900064079E /* HowCanGoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowCanGoViewModel.swift; sourceTree = "<group>"; };
 		C39EB40C2C0799210064079E /* HowCanGoViewController+MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HowCanGoViewController+MapView.swift"; sourceTree = "<group>"; };
 		C39EB40E2C0799620064079E /* HowCanGoViewController+LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HowCanGoViewController+LocationManager.swift"; sourceTree = "<group>"; };
+		C39EB4102C08EF110064079E /* StationViewController+SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StationViewController+SearchView.swift"; sourceTree = "<group>"; };
 		C3F666BA2BC71272009AFAD9 /* RingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F666BD2BC71272009AFAD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3F666BF2BC71272009AFAD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			children = (
 				C3493D842C00EDEA00BDEC2C /* StationViewController.swift */,
 				C3321AF32C00F06700F3961E /* StationViewController+TableView.swift */,
+				C39EB4102C08EF110064079E /* StationViewController+SearchView.swift */,
 			);
 			path = Station;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				C39EB4092C07967E0064079E /* HowCanGoViewController.swift in Sources */,
 				C3321AF42C00F06700F3961E /* StationViewController+TableView.swift in Sources */,
 				C380F2D62BCC10E100BF7E33 /* InitLocationCoordinate.swift in Sources */,
+				C39EB4112C08EF110064079E /* StationViewController+SearchView.swift in Sources */,
 				C380F2D82BCC138F00BF7E33 /* RouteCoordinate.swift in Sources */,
 				C380F2C62BC98B9B00BF7E33 /* NetworkHelper.swift in Sources */,
 				C380F2DC2BD68DF600BF7E33 /* UserLocation.swift in Sources */,
@@ -488,11 +492,12 @@
 				DEVELOPMENT_TEAM = US4P6S3B5V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RingApp/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Konumunu görebilmek için erişim izni vermen gerekiyor.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Konumunu görebilmek için erişim izni vermen gerekiyor.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -516,11 +521,12 @@
 				DEVELOPMENT_TEAM = US4P6S3B5V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RingApp/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Konumunu görebilmek için erişim izni vermen gerekiyor.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Konumunu görebilmek için erişim izni vermen gerekiyor.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

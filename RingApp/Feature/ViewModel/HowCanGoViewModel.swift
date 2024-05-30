@@ -64,19 +64,19 @@ final class HowCanGoViewModel {
         let φ2 = lat2 * .pi / 180
         let Δφ = (lat2 - lat1) * .pi / 180
         let Δλ = (lon2 - lon1) * .pi / 180
-
+        
         let a = sin(Δφ / 2) * sin(Δφ / 2) +
-                cos(φ1) * cos(φ2) *
-                sin(Δλ / 2) * sin(Δλ / 2)
+        cos(φ1) * cos(φ2) *
+        sin(Δλ / 2) * sin(Δλ / 2)
         let c = 2 * atan2(sqrt(a), sqrt(1 - a))
-
+        
         return R * c
     }
-
+    
     func findNearestStation(userLocation: CLLocationCoordinate2D) -> Station? {
         var nearestStation: Station?
         var shortestDistance = Double.greatestFiniteMagnitude
-
+        
         for station in StationCoordinate.coordinates {
             let distance = haversineDistance(
                 lat1: userLocation.latitude,
@@ -91,9 +91,6 @@ final class HowCanGoViewModel {
         }
         return nearestStation
     }
-
-    
-    
 }
 
 extension HowCanGoViewModel: HowCanGoViewModelProtocol { }

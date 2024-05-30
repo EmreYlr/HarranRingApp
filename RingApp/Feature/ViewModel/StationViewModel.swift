@@ -7,8 +7,16 @@
 
 import Foundation
 
-protocol StationViewModelProtocol { }
+protocol StationViewModelProtocol { 
+    var stationCoordinate: [Station] { get }
+    var filteredStationCoordinates: [Station] { get set }
+    var isSearching: Bool { get set }
+}
 
-final class StationViewModel { }
+final class StationViewModel {
+    var stationCoordinate: [Station] = StationCoordinate.coordinates
+    var filteredStationCoordinates: [Station] = []
+    var isSearching: Bool = false
+}
 
 extension StationViewModel: StationViewModelProtocol { }

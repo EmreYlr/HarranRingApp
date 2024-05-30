@@ -10,15 +10,20 @@ import UIKit
 
 extension StationViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return stationCoordinate.count
+        if stationViewModel.isSearching {
+            return stationViewModel.filteredStationCoordinates.count
+        }
+        return stationViewModel.stationCoordinate.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "Cell")
-        cell.textLabel?.text = stationCoordinate[indexPath.row].subtitle
+        let station = stationViewModel.isSearching ? stationViewModel.filteredStationCoordinates[indexPath.row] : stationViewModel.stationCoordinate[indexPath.row]
+        cell.textLabel?.text = station.subtitle
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        showAlert(title: "Detay", message: stationCoordinate[indexPath.row].near!)
+        let station = stationViewModel.isSearching ? stationViewModel.filteredStationCoordinates[indexPath.row] : stationViewModel.stationCoordinate[indexPath.row]
+        showAlert(title: "Detay", message: station.near!)
     }
 }

@@ -8,12 +8,27 @@
 import UIKit
 
 class StationViewController: UIViewController {
+    //MARK: -VARIABLES
     @IBOutlet weak var tableView: UITableView!
-    let stationCoordinate = StationCoordinate.coordinates
+    let searchBar = UISearchBar()
+    var stationViewModel: StationViewModelProtocol = StationViewModel()
+    
+    //MARK: -Functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        initLoad()
+        setupSearchBar()
+    }
+    
+    func initLoad() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.reloadData()
+        searchBar.delegate = self
+    }
+    
+    func setupSearchBar() {
+        searchBar.sizeToFit()
+        searchBar.placeholder = "Arama"
+        tableView.tableHeaderView = searchBar
     }
 }
