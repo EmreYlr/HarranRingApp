@@ -59,7 +59,7 @@ final class HowCanGoViewModel {
     }
     
     private func haversineDistance(lat1: Double, lon1: Double, lat2: Double, lon2: Double) -> Double {
-        let R = 6371000.0 // Dünya'nın yarıçapı (metre)
+        let R = 6371000.0
         let φ1 = lat1 * .pi / 180
         let φ2 = lat2 * .pi / 180
         let Δφ = (lat2 - lat1) * .pi / 180

@@ -39,7 +39,7 @@ final class NetworkManager {
                 case 200:
                     completion(.success(()))
                 case 400:
-                    print("Error")
+                    //print("Error")
                     completion(.failure(.invalidData))
                 case .none:
                     completion(.failure(.invalidURL))
